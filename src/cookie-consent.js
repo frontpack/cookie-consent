@@ -28,7 +28,7 @@
 		var borderDate = new Date();
 		borderDate.setDate(borderDate.getDate() + this._borderInterval);
 		var expireDate = new Date(this._data.expire);
-		return expireDate > borderDate;
+		return borderDate > expireDate;
 	};
 
 
