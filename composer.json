@@ -1,0 +1,21 @@
+{
+	"name": "frontpack/cookie-consent",
+	"type": "library",
+	"description": "Cookie consent bar",
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Jan Pecha",
+			"homepage": "https://www.janpecha.cz/"
+		}
+	],
+	"require": {
+		"frontpack/lucy.js": "^0.1.3"
+	},
+	"extra": {
+		"assets-files": "src/",
+		"cleaner-ignore": [
+			"src/"
+		]
+	}
+}
