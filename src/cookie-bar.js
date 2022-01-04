@@ -124,7 +124,7 @@
 			}
 		}
 
-		this._storage.set(toSave, overrideValue === false ? 14 : 365);
+		this._storage.set(toSave, overrideValue === false ? 14 : 365, overrideValue === false ? 7 : 30);
 	};
 
 

@@ -11,7 +11,6 @@
 		this._onChange = onChange;
 		this._data = this._read();
 		this._dataDefaults = null;
-		this._borderInterval = 30;
 		onInit(this);
 	}
 
@@ -25,8 +24,14 @@
 			return true;
 		}
 
+		var borderInterval = 30;
+
+		if (typeof this._data.border === 'number' && this._data.border >= 0) {
+			borderInterval = this._data.border;
+		}
+
 		var borderDate = new Date();
-		borderDate.setDate(borderDate.getDate() + this._borderInterval);
+		borderDate.setDate(borderDate.getDate() + borderInterval);
 		var expireDate = new Date(this._data.expire);
 		return borderDate > expireDate;
 	};
@@ -79,13 +84,14 @@
 	};
 
 
-	FrontpackCookieConsent.prototype.set = function(categories, expireInterval) {
+	FrontpackCookieConsent.prototype.set = function(categories, expireInterval, borderInterval) {
 		var expire = new Date();
 		expire.setDate(expire.getDate() + expireInterval);
 
 		this._data = {
 			categories: categories,
 			date: new Date(),
+			border: borderInterval,
 			expire: expire
 		};
 
