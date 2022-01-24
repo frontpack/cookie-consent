@@ -189,4 +189,45 @@
 		max-width: 100%;
 		border-radius: 0.25em;
 	}
+
+
+	.cookie-bar--centered {
+		left: 1em;
+		right: 1em;
+		top: 50%;
+		transform: translateY(-37%);
+		bottom: auto;
+		margin: 0 auto;
+	}
+
+
+	.cookie-bar--wide {
+		border-radius: 0;
+		right: 0;
+		left: 0;
+		max-width: none;
+		width: auto;
+		bottom: 0;
+	}
+
+
+	.cookie-bar--wide .cookie-bar__inner {
+		display: flex;
+		align-items: center;
+		gap: 1.5em;
+		max-width: 70em;
+		margin: 0 auto;
+	}
+
+
+	.cookie-bar--wide .cookie-bar__content,
+	.cookie-bar--wide .cookie-bar__buttons {
+		flex: 2;
+	}
+
+
+	.cookie-bar--wide .cookie-bar__buttons {
+		flex: 1;
+		margin-top: 0;
+	}
 }
